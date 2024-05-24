@@ -3,36 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Page iFrame</title>
+    <title>Index</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/akashdip2001/website-2/main/images/favicon.jpg?token=GHSAT0AAAAAACMGYPVOP4ZUPUDP4Q2FKSEWZNNHMWA">
+
     <style>
-        /* Reset margin and padding */
-        body, html {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
+            background-color: #f4f4f4;
+            text-align: center;
         }
-        /* Full-screen iframe */
-        iframe {
-            position: absolute;
+
+        h1 {
+            color: #333;
+            font-size: 24px; /* Adjusted font size for better visibility on mobile */
+            padding: 0 20px; /* Added padding to ensure text doesn't overflow */
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .image-container {
+            display: none; /* Initially hide the image container */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+            z-index: 999; /* Ensure it appears on top of other elements */
+            overflow: auto;
+        }
+
+        .image-container img {
+            display: block;
+            margin: auto;
+            max-width: 90%; /* Adjust the maximum width of images */
+            max-height: 90%; /* Adjust the maximum height of images */
+            padding: 20px; /* Add padding around the images */
+        }
+
+         .login {
+            background-color: transparent; /* Transparent background */
+            color: #089938; /* Button text color */
             border: none;
+            padding: 10px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            position: fixed; /* Positioning at bottom */
+            bottom: 20px; /* Distance from bottom */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center horizontally */
+            width: auto;
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
         }
     </style>
 </head>
 <body>
-    <iframe src="https://onion2003.github.io/Lab-videos/option.html"></iframe>
+    <div class="button-container">
+        <h1>direct login page</h1><br>
+        
+       <!-- <a href="https://akashdip2001.github.io/Exam/freecad.html" class="button">FreeCAD</a>
+        <a href="https://akashdip2001.github.io/Exam/exam.html" class="button">Freecad Exam</a>
+        <a href="https://akashdip2001.github.io/Exam/slider1.html" class="button">Manufacturing</a>
+        <a href="https://akashdip2001.github.io/Exam/slider3.html" class="button">metrology</a>
+        <a href="https://akashdip2001.github.io/Exam/slider2.html" class="button">Engineering Drawing</a>-->
+
+        <a href="https://akashdip2001.github.io/Exam/freecad.html" class="button">FreeCAD</a>
+        <a href="https://akashdip2001.github.io/Exam/exam.html" class="button">Freecad Exam</a>
+        <a href="https://play.google.com/store/apps/details?id=com.akashdipmahapatra.freecad&pcampaignid=web_share" class="button">Manufacturing</a>
+        <a href="https://play.google.com/store/apps/details?id=com.akashdipmahapatra.freecad&pcampaignid=web_share" class="button">metrology</a>
+        <a href="https://play.google.com/store/apps/details?id=com.akashdipmahapatra.freecad&pcampaignid=web_share" class="button">Engineering Drawing</a>
+    </div>
+
+    <script>
+        function showImages() {
+            document.getElementById("imageContainer").style.display = "block";
+        }
+
+        function hideImages() {
+            document.getElementById("imageContainer").style.display = "none";
+        }
+    </script>
 </body>
 </html>
-
-<script>
-  document.addEventListener('contextmenu', event => event.preventDefault());
-  document.addEventListener('keydown', function(event) {
-    if (event.ctrlKey && (event.key === 'u' || event.key === 's') || event.key === 'F12') {
-      event.preventDefault();
-    }
-  });
-</script>
